@@ -1,0 +1,24 @@
+/* Colors */
+
+$delColor: #3a0a60;
+$confirmColor: #34c357;
+$retColor: #f1bb37;
+$analisColor: #cf7c1d;
+
+.order-card {
+    border-left: 8px solid;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.order-id {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(39, 39, 39)
+}
+
+.order-status, .order-delivery {
+    font-size: .7em;
+    font-weight: bold;
+}
