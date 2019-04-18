@@ -1,0 +1,22 @@
+<ion-card *ngFor="let item of items; let i = index"
+  [style.borderLeft]="'17px solid' + item.color">
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7">
+          <h2><strong>Pedido #{{item.id}}</strong></h2>
+          <ion-text color="success">
+            <h4>Pagamento confirmado</h4>
+          </ion-text>
+          <p [ngStyle]="{'color': item.color}" *ngIf="i === 1" >Delivery</p>
+        </ion-col>
+        <ion-col size="5">
+          <div class="p-t-10"></div>
+          <ion-button expand="block" color="success" size="small" class="btn-pedidos">Iniciar</ion-button>
+          <p><strong>Entrega em 00:00</strong></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+

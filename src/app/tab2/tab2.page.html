@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pedidos 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <h5 class="m-0 p-t-20 p-l-20 title-style-2">SuperComprador</h5>
+        <h2 class="m-0 p-l-20 title-style-1"><strong>Fernando Neto</strong></h2>
+      </ion-col>
+      <ion-col size="3" class="p-t-30">
+        <ion-toggle color="dark"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <app-card-item-pedido [items]="allPedidos"></app-card-item-pedido>
+</ion-content>

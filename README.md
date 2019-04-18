@@ -1,18 +1,52 @@
-# Vaga Frontend Angular
+# AppSuper
 
-Bem vindo ao teste para a vaga de desenvolvedor Frontend Angular. 
-O intuito desse teste é avaliar sua experiência com o framework Angular
-em conjunto do Ionic na criação de aplicativos Hibrídos.
+App que lista pedidos a serem separados.
 
-O teste se baseia nos seguintes passos:
+## Telas do App
 
-1. Forkar este repositório
-2. Criar uma branch com seu nome
-3. Criar um app Ionic 4 com navegação em abas.
-4. Criar uma página onde será listado pedidos a serem separados ( Layout no diretório material ).
-5. A lista de pedidos deve consumir uma API RESTful, de sua escolha, mockada ou randomica, como por exemplo: https://reqres.in/.
-6. Ao finalizar, criar um pull request descrevendo o que foi feito.
+Página Inicial             |  Página de Pedidos
+:-------------------------:|:-------------------------:
+<img src="documentation/page-1.png" width="350">  | <img src="documentation/page-2.png" width="350">
 
-*Será um plus para aqueles que fizeram testes e2e e unitários.*
+## Organização dos Diretórios
 
-Boa sorte e bom código!
+### Diretório `app/components`
+
+Aqui ficará todos os componentes do aplicativo. Todos os componentes terão seu próprio diretório, e serão registrados no arquivo de módulo `components.module` que é importado no módulo principal.
+
+### Diretório `app/scss`
+
+Aqui ficará todos os estilos customizados para o aplicativo. Caso você queira importar algum tema ou css de algum library, também pode ser colocado aqui.
+
+### Diretório `app/services`
+
+Aqui ficará todos os services da aplicação separados por módulo ou componentes. Todos são registrados no arquivo `services.module` que é importado no módulo principal.
+
+## Executando a Aplicação
+
+### Clonando o projeto
+
+```bash
+$ git clone https://github.com/dejaneves/test-frontend.git
+```
+
+### Instalando as Dependêcias
+
+Após baixar o projeto entre na pasta `test-frontend`.
+
+```bash
+$ cd test-frontend
+```
+e execute o sequinte comando, para instalar as dependências.
+
+```bash
+$ npm install
+```
+rodando o projeto
+
+```bash
+$ ionic serve
+ng run app:serve --host=0.0.0.0 --port=8100
+```
+
+para ver a aplicação rodando no browser: http://localhost:8100
