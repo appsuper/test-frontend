@@ -1,0 +1,46 @@
+<ion-content fullscreen="true" class="ion-padding">
+  <ion-grid>
+    <ion-row syle="margin-top: 15px">
+      <ion-col size="8">
+        <app-title ttl="SuperComprador" ttlname="Francisco Neto"></app-title>
+      </ion-col>
+      <ion-col size="4" style="display: flex" class="ion-justify-content-end">
+        <ion-toggle color="success"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row *ngFor="let order of orders" class="ion-justify-content-center">
+      <ion-col size-sm="10" size-md="8" size-lg="6" size-xl="4">
+        <app-order-card [order]="order"></app-order-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="spinner" *ngIf="isNoScrollLoading">
+      <ion-col class="ion-justify-content-center" style="text-align: center;">
+          <ion-spinner></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-infinite-scroll threshold="40%" (ionInfinite)="getOrders($event)" class="ion-margin-top">
+    <ion-infinite-scroll-content
+      loadingSpinner="default">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-grid syle="margin-top: 15px" *ngIf="error">
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content class="error-msg" style="text-align: center">
+            {{errorMsg}}
+          </ion-card-content>
+          <ion-item class="ion-justify-content-center">
+            <ion-button style="margin: 0 auto;" color="light" (onclick)="reloadOrders()"><ion-icon name="refresh"></ion-icon>Recarregar</ion-button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

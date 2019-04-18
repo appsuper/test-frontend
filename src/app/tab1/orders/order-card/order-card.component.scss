@@ -1,0 +1,86 @@
+/* Colors */
+
+$purpleColor: #3a0a60;
+$greenColor: #34c357;
+$yellowColor: #f1bb37;
+$orangeColor: #cf7c1d;
+
+.order-card {
+    border-left: 12px solid;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+    background-color: #fff;
+    &.border-color-yellow {
+        border-left-color: $yellowColor;
+    }
+    &.border-color-purple {
+        border-left-color: $purpleColor;
+    }
+}
+
+.order-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+    > * {
+        width: 100%;
+        margin: 5px;
+        text-align: left;
+    };
+    .order-id {
+        font-size: 1em;
+        font-weight: bold;
+        color: rgb(39, 39, 39)
+    }
+    .order-status, .order-delivery {
+        font-size: .7em;
+        font-weight: bold;
+    }
+}
+
+.color-orange {
+    color: $orangeColor;
+}
+.color-green {
+    color: $greenColor;
+}
+.color-purple {
+    color: $purpleColor;
+}
+.color-yellow {
+    color: $yellowColor;
+}
+
+.action-button {
+    width: 100%; 
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    ion-button {
+        width: 130px;
+        height: 2.4em;
+    }
+    .delivery-time {
+        font-size: .7em;
+        font-weight: bold;
+        width: 100%;
+        text-align: right;
+        margin: 3px;
+        display: flex;
+        justify-content: flex-end;
+        div {
+            width: 130px;
+            text-align: center;
+        }
+    }
+}

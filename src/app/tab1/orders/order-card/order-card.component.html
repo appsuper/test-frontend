@@ -1,0 +1,28 @@
+<div class="order-card" [ngClass]="{
+  'border-color-purple': order.deliveryCode === 1,
+  'border-color-yellow': order.deliveryCode === 2
+}">
+  <ion-row>
+    <ion-col size="7">
+      <div class="order-info">
+        <div class="order-id">Pedido #{{order.id}}</div>
+        <div class="order-status" [ngClass]="{
+            'color-orange': order.statusCode === 1,
+            'color-green': order.statusCode === 2
+          }">{{order.status}}</div>
+        <div class="order-delivery" [ngClass]="{
+            'color-purple': order.deliveryCode === 1,
+            'color-yellow': order.deliveryCode === 2
+          }">{{order.delivery}}</div>
+      </div>
+    </ion-col>
+    <ion-col size="5">
+      <div class="action-button">
+        <ion-button color="success" expand="full" class="ion-text-capitalize">Iniciar</ion-button>
+        <div class="delivery-time">
+          <div>Entrega em 0:00</div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
