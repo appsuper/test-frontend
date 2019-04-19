@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { catchError } from 'rxjs/operators'
+import { of } from 'rxjs'
 
 import { OrdersService } from './orders.service';
 import { Order } from './entities/order.interface';
@@ -34,7 +36,14 @@ export class OrdersComponent implements OnInit {
     if (!event) {
       this.isNoScrollLoading = true;
     }
-    this.ordersService.getOrders(this.nextPage).subscribe( res => {
+    this.ordersService.getOrders(this.nextPage).pipe(
+      catchError( err => {
+        this.error = true;
+        this.errorMsg = 'Houve um erro ao carregar os seus pedidos!';
+        return of([]);
+      })
+    )
+    .subscribe( res => {
       this.pagesMeta = res.meta;
       this.nextPage = this.pagesMeta.currentPage + 1;
       this.orders = this.orders.concat(res.orders);
@@ -44,7 +53,7 @@ export class OrdersComponent implements OnInit {
       }
     }, error => {
       this.error = true;
-      this.errorMsg = 'Houve um erro ao carregar os seus pedidos!';
+      this.errorMsg = 'Houve um problema ao buscar os Pedidos!';
     },
       () => {
         this.isNoScrollLoading = false;

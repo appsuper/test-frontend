@@ -16,3 +16,9 @@ O teste se baseia nos seguintes passos:
 *Será um plus para aqueles que fizeram testes e2e e unitários.*
 
 Boa sorte e bom código!
+
+## Instruções
+
+- <strong>ionic serve</strong> => executa a app em modo desenvolvimento
+- <strong>ng test</strong> => executa os testes unitários
+- <strong>ng e2e</strong> => execut os testes e2e
