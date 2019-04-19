@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class OrdersService {
     private http: HttpClient
   ) { }
 
-  getOrders(page = null) {
+  getOrders(page: number = null) {
     return this.http.get<any>(`${this.apiUrl}/orders${(page) ? '/' + page : ''}`);
   }
 }

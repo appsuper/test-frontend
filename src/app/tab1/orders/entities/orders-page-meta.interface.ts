@@ -1,4 +1,4 @@
-interface OrdersPageMeta {
+export interface OrdersPageMeta {
     pages: number;
     currentPage: number;
     totalItems: number;

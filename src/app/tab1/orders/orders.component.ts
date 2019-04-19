@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+
 import { OrdersService } from './orders.service';
+import { Order } from './entities/order.interface';
+import { OrdersPageMeta } from './entities/orders-page-meta.interface';
+
 import { IonInfiniteScroll } from '@ionic/angular';
 
 @Component({

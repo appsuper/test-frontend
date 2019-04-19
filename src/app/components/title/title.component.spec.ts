@@ -24,4 +24,12 @@ describe('TitleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show the titles passed as @Input()', () => {
+    component.ttl = 'SuperComprador';
+    component.ttlname = 'João Gabriel';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.title').innerText).toEqual('SuperComprador');
+    expect(fixture.nativeElement.querySelector('.name').innerText).toEqual('João Gabriel');
+  });
 });
