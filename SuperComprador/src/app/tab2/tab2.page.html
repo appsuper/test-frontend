@@ -1,0 +1,27 @@
+<ion-content style="height: 100%;width: 100%; color: #f1f1f1">
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card-header style="font-family: initial;">
+            <ion-card-subtitle>SuperComprador</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content style="font-family: initial;">
+            <ion-card-title>Francisco Neto</ion-card-title>
+          </ion-card-content>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-card-content style="margin-top: 10%;margin-left: 10%;">
+            <div>
+              <ion-toggle checked color="dark" slot="end" (click)="atualizarBtnIniciar($event)">
+              </ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <app-list-pedidos></app-list-pedidos>
+</ion-content>
