@@ -1,0 +1,81 @@
+<li *ngFor="let pedido of pedidos">
+  <ion-card class="borda1-delivery" *ngIf="pedido.tipo === 'Delivery'">
+    <ion-card class="borda2">
+      <ion-grid style="margin-bottom: 5%;margin-top: -5%;">
+        <ion-row>
+          <ion-col>
+            <ion-card-header>
+              <ion-card-subtitle color="dark">Pedido #{{ pedido.id }}</ion-card-subtitle>
+
+              <ion-card-subtitle>
+                <ion-text>{{ pedido.tipo }}</ion-text>
+              </ion-card-subtitle>
+
+              <ion-card-subtitle>
+                <ion-text *ngIf="pedido.status == '1'" color="success"
+                  >Pagamento Confirmado</ion-text
+                >
+                <ion-text *ngIf="pedido.status == '2'" color="danger">Pagamento Recusado</ion-text>
+                <ion-text *ngIf="pedido.status == '3'" color="warning"
+                  >Processando Pagamento</ion-text
+                >
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-col>
+          <ion-col>
+            <ion-card-content style="margin-top: 10%;">
+              <ion-button *ngIf="this.statusComprador == true" color="success" size="small"
+                >Iniciar</ion-button
+              >
+              <ion-label>
+                <ion-text color="dark">
+                  Entrega em {{ pedido.qtdHorasEntrega }}:{{ pedido.qtdMinutosEntrega }}
+                </ion-text>
+              </ion-label>
+            </ion-card-content>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-card>
+
+  <ion-card *ngIf="pedido.tipo === 'Retirada'" class="borda1-retirada">
+    <ion-card class="borda2">
+      <ion-grid style="margin-bottom: 5%;margin-top: -5%;">
+        <ion-row>
+          <ion-col>
+            <ion-card-header>
+              <ion-card-subtitle color="dark">Pedido #{{ pedido.id }}</ion-card-subtitle>
+              <!-- Pedido #00001 -->
+              <ion-card-subtitle>
+                <ion-text>{{ pedido.tipo }}</ion-text>
+              </ion-card-subtitle>
+              <ion-card-subtitle>
+                <ion-text *ngIf="pedido.status == '1'" color="success"
+                  >Pagamento Confirmado</ion-text
+                >
+                <ion-text *ngIf="pedido.status == '2'" color="danger">Pagamento Recusado</ion-text>
+                <ion-text *ngIf="pedido.status == '3'" color="warning"
+                  >Processando Pagamento</ion-text
+                >
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-col>
+          <ion-col>
+            <ion-card-content style="margin-top: 10%;">
+              <ion-button *ngIf="this.statusComprador == true" color="success" size="small"
+                >Iniciar</ion-button
+              >
+              <ion-label>
+                <!-- slot="end" -->
+                <ion-text color="dark">
+                  Entrega em {{ pedido.qtdHorasEntrega }}:{{ pedido.qtdMinutosEntrega }}
+                </ion-text>
+              </ion-label>
+            </ion-card-content>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-card>
+</li>
