@@ -1,0 +1,20 @@
+{
+
+	"pedidos": [{
+		"id": "00001",
+		"status_pagamento": "pendente",
+		"tipo_entrega": "Retirada"
+	}, {
+		"id": "00002",
+		"status_pagamento": "confirmado",
+		"tipo_entrega": "Delivery"
+	}, {
+		"id": "00003",
+		"status_pagamento": "pendente",
+		"tipo_entrega": "Retirada"
+	}, {
+		"id": "00004",
+		"status_pagamento": "confirmado",
+		"tipo_entrega": "Delivery"
+	}]
+}

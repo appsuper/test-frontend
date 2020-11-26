@@ -1,0 +1,101 @@
+.header {
+	margin-bottom: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-title-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.header-sub {
+	font-weight: 700;
+	font-size: 14px;
+	color: rgb(182, 182, 182);
+}
+
+.header-title {
+	font-size: large;
+	font-weight: 700;
+	margin-top: 5px;
+	color: rgb(104, 104, 104);
+}
+
+.card-delivery {
+	border-left: 10px solid #3a0a60;
+}
+
+.card-retirada {
+	border-left: 10px solid #efba37;
+}
+
+.id-pedido {
+	font-size: large;
+	font-weight: 700;
+}
+
+.status-pagamento-confirmado {
+	margin-top: 5px;
+	color: #35b60d;
+	font-weight: 600;
+}
+
+.status-pagamento-pendente {
+	margin-top: 5px;
+	color: #b61212;
+	font-weight: 600;
+}
+
+.tipo-entrega-delivery {
+	margin-top: 5px;
+	font-weight: 700;
+	color: #3a0a60;
+}
+
+.tipo-entrega-retirada {
+	margin-top: 5px;
+	font-weight: 700;
+	color: #efba37;
+}
+
+.pedido {
+	margin-top: 10px;
+	padding: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.descricao-pedido {
+	display: flex;
+	flex-direction: column;
+}
+
+.iniciar-entrega {
+	display: flex;
+	flex-direction: column;
+
+	button {
+		background-color: #34c357;
+		padding: 10px;
+		color: white;
+		font-weight: bold;
+		font-size: medium;
+		border-radius: 5px;
+	}
+
+	span {
+		margin-top: 5px;
+		font-weight: 700;
+		font-size: 16px;
+	}
+}
+
+ion-card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
