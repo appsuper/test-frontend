@@ -1,0 +1,27 @@
+<ion-content fullscreen>
+	<div class="header">
+		<div class="header-title-container">
+			<span class="header-sub">SuperComprador</span>
+			<span class="header-title">Francisco Neto</span>
+		</div>
+		<ion-toggle [checked]="true"></ion-toggle>
+	</div>
+	<ion-card *ngFor="let pedido of pedidos"
+		[ngClass]="pedido.tipo_entrega == 'Delivery'  ? 'card-delivery':'card-retirada'">
+		<div class="pedido">
+			<div class="descricao-pedido">
+				<span class="id-pedido">Pedido #{{pedido.id}}</span>
+				<span
+					[ngClass]="pedido.status_pagamento == 'pendente' ?'status-pagamento-pendente' :'status-pagamento-confirmado' ">Pagamento
+					{{pedido.status_pagamento}}</span>
+				<span
+					[ngClass]="pedido.tipo_entrega == 'Delivery'  ? 'tipo-entrega-delivery':'tipo-entrega-retirada'">{{pedido.tipo_entrega}}</span>
+			</div>
+			<div class="iniciar-entrega">
+				<button>Iniciar</button>
+				<span>Entrega em 00:00</span>
+			</div>
+		</div>
+	</ion-card>
+
+</ion-content>
